@@ -1,0 +1,3 @@
+bot:
+  username: svt_vtt_bot
+  token: ${BOT_TOKEN}
