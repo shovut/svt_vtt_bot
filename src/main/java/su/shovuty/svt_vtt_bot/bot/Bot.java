@@ -49,7 +49,6 @@ public class Bot extends TelegramLongPollingBot {
 
     }
 
-    @SneakyThrows
     private void sendMsg(long chatId, int messageId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(String.valueOf(chatId));
@@ -62,7 +61,6 @@ public class Bot extends TelegramLongPollingBot {
         }
     }
 
-    @SneakyThrows
     private void sendInitMsg(long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(String.valueOf(chatId));
