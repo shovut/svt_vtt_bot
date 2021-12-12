@@ -52,7 +52,11 @@ public class Bot extends TelegramLongPollingBot {
     private void sendMsg(long chatId, int messageId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(String.valueOf(chatId));
-        sendMessage.setText("Осуждаю голосовые сообщения");
+        if (messageId % 2 == 0) {
+            sendMessage.setText("Осуждаю голосовые сообщения");
+        } else {
+            sendMessage.setText("Ты редиска");
+        }
         sendMessage.setReplyToMessageId(messageId);
         try {
             execute(sendMessage);
